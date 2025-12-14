@@ -596,5 +596,10 @@ fig.update_layout(barmode="relative")
 for annotation in fig.layout.annotations:
     annotation.font = dict(size=14, color="black", family="Arial Black")
 
-fig.show(renderer="browser")
+fig.write_html(
+    "index.html",
+    include_plotlyjs="cdn",
+    full_html=True
+)
+
 
